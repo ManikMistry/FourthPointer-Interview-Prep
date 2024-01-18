@@ -62,7 +62,6 @@ function add(a,b,c){
 higherOrder(add,1,2,3);
 
 // Callback function
-
 function Callback(){
     console.log("I am callback")
 }
@@ -74,3 +73,15 @@ function main(cb){
     },2000)
 }
 main(Callback)
+
+// Closure
+function Closure(){
+    let a=10;
+   return function child(){
+    let b=30;
+        return function subChlid(){
+            console.log(a+b)
+        }
+    }
+}
+Closure()()();
