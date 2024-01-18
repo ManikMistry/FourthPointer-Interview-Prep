@@ -18,7 +18,7 @@ a="manik";
 let b=20;
 b=30;
 const c=40;
-c=60;
+// c=60;
 
 //Block scope
 {
@@ -30,8 +30,24 @@ console.log(a) //we can not access let outside block scope
 
 let name="manik"; //this can be access through out the code
 
+// Function scope
 function scope(){
     let xyz=20;
     console.log(xyz,name)
 }
 scope();  //This is function scope and name is the lexical environemet of scope function
+
+// Variable shadowing
+let outer=20;
+function inner(){
+    let outer=30;
+    console.log(outer);
+}
+inner();
+console.log(outer);
+
+// Function exprssion
+const fn=function fnExpression(){
+    console.log("Function Expresion")
+}
+fn();
