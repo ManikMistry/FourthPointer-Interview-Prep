@@ -46,8 +46,10 @@ function inner(){
 inner();
 console.log(outer);
 
-// Function exprssion
+// Function expression
 const fn=function fnExpression(){
     console.log("Function Expresion")
 }
 fn();
+
+// 
