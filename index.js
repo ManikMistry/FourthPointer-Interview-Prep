@@ -53,7 +53,6 @@ const fn=function fnExpression(){
 fn();
 
 // Higher order function
-
 function higherOrder(fun,a,b,c){
     return fun(a,b,c);
 }
@@ -61,3 +60,17 @@ function add(a,b,c){
     console.log(a+b+c)
 }
 higherOrder(add,1,2,3);
+
+// Callback function
+
+function Callback(){
+    console.log("I am callback")
+}
+
+function main(cb){
+    console.log("Let me finished the operation");
+    setTimeout(()=>{
+        cb();
+    },2000)
+}
+main(Callback)
