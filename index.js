@@ -85,3 +85,51 @@ function Closure(){
     }
 }
 Closure()()();
+
+
+// slice 
+let str1="abcd";
+console.log(str1.slice(0,1))
+// splice
+const aar=[1,2,3,4]
+console.log(aar.splice(1,2))
+
+// map
+const array=[1,2,3]
+const result=array.map((e)=>{
+    return e*2;
+})
+console.log(result);
+
+//filter
+const result2=array.filter((e)=>{
+    return e%2==0;
+})
+console.log(result2);
+
+// reduce
+const array2=[1,2,3];
+const result3=array2.reduce((a,n)=>{
+    return a+n;
+},2);
+console.log(result3);
+
+// Given assignment by 1st round of Forth Pointer
+// Find the maximum
+
+const findMaximum=(arr)=>{
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                let temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    return arr[arr.length-1];
+}
+
+
+let arr2=[1,25,12,3,4,56,77,9];
+console.log(findMaximum(arr2));
